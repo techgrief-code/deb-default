@@ -83,8 +83,12 @@ Append one line of code:
 Change the corresponding data, example:
 
     UUID=1127c174-911f-4b1c-a3f1-4dfaf911f014	/root/mount/<devicename>	ext4	defaults	0	2
+If you use ntfs, install ntfs-3g aswell:
+
+    sudo apt-get install ntfs-3g -y
 
 Save and then close the file. Now mount your drive.
 
     systemctl daemon-reload
     sudo mount -a
+
