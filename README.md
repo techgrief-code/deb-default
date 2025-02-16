@@ -48,18 +48,37 @@ Restart networking service
     ./install_docker_nproxyman.sh
 
 # Install Dockge
-### Create directories that store your stacks and stores Dockge's stack
+Create directories that store your stacks and stores Dockge's stack
 
     mkdir -p /opt/stacks /opt/dockge
     cd /opt/dockge
 
-### Download the compose.yaml
+ Download the compose.yaml
 
     curl https://raw.githubusercontent.com/louislam/dockge/master/compose.yaml --output compose.yaml
 
-### Start the server
+Start the server
 
     docker compose up -d
 
 # Mount
+ Get the Name, UUID and File System Type
 
+    sudo blkid
+
+Make a Mount Point For Your Drive, replace devicename with your prefered name
+
+    sudo mkdir /root/mount/<devicename>
+Configure auto mount
+
+    sudo nano /etc/fstab
+Append one line of code:
+
+    UUID=<uuid-of-your-drive>  <mount-point>  <file-system-type>  <mount-option>  <dump>  <pass>
+Change the corresponding data, example:
+
+    UUID=1127c174-911f-4b1c-a3f1-4dfaf911f014  /root/mount/<devicename>  ext4  defaults  0  2
+
+Save and then close the file. Now mount your drive
+
+    sudo mount -a
