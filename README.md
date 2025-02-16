@@ -86,6 +86,9 @@ Change the corresponding data, example:
 If you use ntfs, install ntfs-3g aswell:
 
     sudo apt-get install ntfs-3g -y
+Format your ntfs drive, devicename is /dev/sda2 for example
+
+    sudo mkntfs --fast <devicename>
 
 Save and then close the file. Now mount your drive.
 
