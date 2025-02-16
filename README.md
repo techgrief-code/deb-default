@@ -71,7 +71,7 @@ Start the server
 
 Make a Mount Point For Your Drive, replace devicename with your prefered name
 
-    sudo mkdir /root/mount/<devicename>
+    sudo mkdir /root/mount/<devicename> -p
 Configure auto mount
 
     sudo nano /etc/fstab
