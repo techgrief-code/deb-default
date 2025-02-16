@@ -46,6 +46,9 @@ Restart networking service
     wget https://gitlab.com/bmcgonag/docker_installs/-/raw/main/install_docker_nproxyman.sh
     chmod +x ./install_docker_nproxyman.sh
     ./install_docker_nproxyman.sh
+# Create Directory for docker image configs
+
+    mdkir /root/docker_dir
 
 # Install Dockge
 Create directories that store your stacks and stores Dockge's stack
