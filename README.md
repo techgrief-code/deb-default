@@ -77,11 +77,14 @@ Configure auto mount
     sudo nano /etc/fstab
 Append one line of code:
 
-    UUID=<uuid-of-your-drive>  <mount-point>  <file-system-type>  <mount-option>  <dump>  <pass>
+> Use tabs!!
+
+    UUID=<uuid-of-your-drive>	<mount-point>	<file-system-type>	<mount-option>	<dump>	<pass>
 Change the corresponding data, example:
 
-    UUID=1127c174-911f-4b1c-a3f1-4dfaf911f014  /root/mount/<devicename>  ext4  defaults  0  2
+    UUID=1127c174-911f-4b1c-a3f1-4dfaf911f014	/root/mount/<devicename>	ext4	defaults	0	2
 
-Save and then close the file. Now mount your drive
+Save and then close the file. Now mount your drive.
 
+    systemctl daemon-reload
     sudo mount -a
