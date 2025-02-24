@@ -41,6 +41,19 @@ Restart networking service
 
     sudo systemctl restart networking.service
 
+# Enable Root login on ssh
+Edit ssh config
+
+    sudo nano /etc/ssh/sshd_config
+
+change PermitRootLogin to yes
+
+    PermitRootLogin yes
+
+Restart ssh
+
+    sudo systemctl restart ssh
+
 # Install Docker
 
     wget https://gitlab.com/bmcgonag/docker_installs/-/raw/main/install_docker_nproxyman.sh
@@ -94,4 +107,7 @@ Save and then close the file. Now mount your drive.
 
     systemctl daemon-reload
     sudo mount -a
+
+
+
 
